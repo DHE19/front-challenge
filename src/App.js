@@ -96,7 +96,9 @@ const App = () => {
             height: "60vh",
             width: "100%",
             overflow:'hidden',
-            borderRadius:'10px'
+            borderRadius:'10px',
+            animationName:'showPanel',
+            animationDuration:'1.5s'
           }}
         >
           {moveableComponents.map((item, index) => (

@@ -12,7 +12,12 @@ body{
   color: #405cf5;
   text-align: center;
   margin: 15px 0;
+  animation-name: showE;
+  animation-duration: 1s;
 }
+
+
+
 
 .component_container {
   position: relative;
@@ -116,5 +121,27 @@ ol{
 
   to{
     scale: 1;
+  }
+}
+
+@keyframes showE{
+
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+
+}
+
+@keyframes showPanel{
+  from{
+    width: 0;
+  }
+
+  to{
+    width: 100%;
   }
 }
