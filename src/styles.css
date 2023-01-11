@@ -5,8 +5,13 @@ body{
   font-family: 'Montserrat',sans-serif;
 }
 .title {
-  font-family: sans-serif;
+  font-family: 'Courgette', sans-serif;
+  font-size: 4rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+  color: #405cf5;
   text-align: center;
+  margin: 15px 0;
 }
 
 .component_container {
@@ -74,6 +79,9 @@ body{
  background-color: #1a3cfd;;
 }
 
+
+
+
 .main {
   display: grid;
   gap: 1em;
@@ -99,4 +107,14 @@ ol{
   border-radius: 50%;
   border: none;
   font-size: 8px;
+}
+
+@keyframes popup{
+  from{
+    scale: 0;
+  }
+
+  to{
+    scale: 1;
+  }
 }

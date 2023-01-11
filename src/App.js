@@ -82,6 +82,9 @@ const App = () => {
 
   return (
     <main style={{ height : "100vh", width: "100vw" }}>
+
+    <h1 className="title">Challange</h1>
+
       <div className="editable">
 
         <div  
@@ -113,7 +116,7 @@ const App = () => {
       </div>
 
       <div>
-          <h1 style={{textAlign:'center'}}>Figuras</h1>
+          <h1 style={{textAlign:'center'}}>Elemts</h1>
           <ol>
              {moveableComponents.map((i, index) => (
               <li key={i.id} className='li-element'>
@@ -233,10 +236,10 @@ const Component = ({
     if (positionMaxLeft > parentBounds?.width)
       newWidth = parentBounds?.width - left;
 
-    const { lastEvent } = e;
+    /* const { lastEvent } = e;
     const { drag } = lastEvent;
     const { beforeTranslate } = drag;
-    /* const absoluteTop = top - beforeTranslate[1];
+    const absoluteTop = top - beforeTranslate[1];
     const absoluteLeft = left - beforeTranslate[0]; */
 
     updateMoveable(
@@ -266,7 +269,9 @@ const Component = ({
           height: height,
           background: color,
           borderRadius:'5px',
-          overflow:'hidden'
+          overflow:'hidden',
+          animationName:'popup',
+          animationDuration:'0.4s',
         }}
         onClick={() => setSelected(id)}
       >
@@ -278,6 +283,7 @@ const Component = ({
         target={isSelected && ref.current}
         resizable
         draggable
+        /* called when event Drag is triggered */
         onDrag={(e) => {
           updateMoveable(id, {
             top: e.top,
